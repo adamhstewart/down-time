@@ -1,7 +1,6 @@
 <drac2>
 #Define variables for later use
 cc = "Celestial Revelation"
-desc = "You can transform as a Bonus Action using one of the options listed. The transformation lasts for 1 minute or until you end it."
 rest = "You can’t transform again until you finish a Long Rest."
 noCC = "You do not have this ability."
 ch=character()
