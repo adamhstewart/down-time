@@ -23,7 +23,7 @@ harv_bonus = ""
 
 # Setup error based on args
 if len(args) == 0:
-	err(f'''You must provide an argument for the type of hunting you want to do, core arguments include `grassland`, `mountain`, and `forest`. Your server may have additional options, contact your bot gurus for details''')
+	err(f'''You must provide an argument for the type of hunting you want to do, core arguments include `grasslands`, `mountains`, and `forest`. Your server may have additional options, contact your bot gurus for details''')
 
 # Grab svars
 dataSelect = load_json(get_svar("HuntArgs", "{}"))
@@ -187,7 +187,7 @@ else:
 	ind = huntlist.index(maxbonus)
 	attackname = attacklist[ind]
 	attBonus = maxbonus
-kill_string = ["1d20", "2d20kh1", "3d20kh1", "2d20kl1"][attackadv] + ('ro'+rr_num if rr_num else '')
+kill_string = ["1d20", "2d20kh1", "3d20kh1", "2d20kl1"][attackadv] + ("+1d4[bless]" if parse.get("bless") else "") + ('ro'+rr_num if rr_num else '')
 kill_check = vroll(f'{kill_string}+{attBonus}{misc_bonus}{kill_bonus}')
 
 # Establish the nature harvest check
